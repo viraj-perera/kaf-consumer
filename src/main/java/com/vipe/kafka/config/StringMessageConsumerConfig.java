@@ -14,8 +14,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-public class KafkaConsumerConfig {
-
+public class StringMessageConsumerConfig {
+/*
     @Value(value = "${kafka.bootstrapAddress}")
     private String bootstrapAddress;
 
@@ -25,7 +25,7 @@ public class KafkaConsumerConfig {
     public static final String topic1 = "topic_1";
 
     @Bean
-    public ConsumerFactory<String, String> consumerFactory() {
+    public ConsumerFactory<String, String> consumerFactory2() {
         Map<String, Object> props = new HashMap<>();
         props.put( ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
         props.put( ConsumerConfig.GROUP_ID_CONFIG, groupId);
@@ -35,9 +35,11 @@ public class KafkaConsumerConfig {
     }
 
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, String> kafkaListenerContainerFactory() {
+    public ConcurrentKafkaListenerContainerFactory<String, String> kafkaListenerContainerFactory2() {
         ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
-        factory.setConsumerFactory(consumerFactory());
+        factory.setConsumerFactory(consumerFactory2());
         return factory;
     }
+
+*/
 }
